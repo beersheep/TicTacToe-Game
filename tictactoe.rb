@@ -57,6 +57,18 @@ def check_winner(board)
   nil  
 end
 
+def display_winning_message(winner)
+  
+  if winner == "Player"
+    puts "You won!"
+  elsif winner == "Computer"
+    puts "Computer won!"
+  else 
+   puts "It's a tie!"
+  end
+
+end
+
 board = initialize_board
 draw_board(board)
 
@@ -68,12 +80,6 @@ begin
   winner = check_winner(board)
 end until winner || empty_square(board).empty?
 
-if winner == "Player"
-  puts "You won!"
-elsif winner == "Computer"
-  puts "Computer won!"
-else 
-  puts "It's a tie!"
-end
+  display_winning_message(winner)
   
 
