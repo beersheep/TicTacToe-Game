@@ -73,10 +73,10 @@ board = initialize_board
 draw_board(board)
 
 begin 
-	player_pick_square(board)
-	draw_board(board)
-	computer_pick_square(board)
-	draw_board(board) 
+  player_pick_square(board)
+  draw_board(board)
+  computer_pick_square(board)
+  draw_board(board) 
   winner = check_winner(board)
 end until winner || empty_square(board).empty?
 
